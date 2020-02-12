@@ -30,6 +30,8 @@ class Node:
         
         self.latitude = 0.0
         
+        self.altitude = 0.0
+        
         self.longitude = 0.0
         
         self.pub_gps_fix = rospy.Publisher('gps_fix', GPSFix, queue_size = 1)

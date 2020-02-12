@@ -22,7 +22,7 @@ class Node:
 
         rospy.on_shutdown(self.shutdown)
 
-        rospy.loginfo("Starting node...")
+        rospy.loginfo("Starting GPS convertion...")
 
         self.rate = 1.0
         
@@ -41,8 +41,6 @@ class Node:
         self.sub_gps_heading = rospy.Subscriber('heading', Float64, self.gps_heading_callback)
         
         self.gps_msg = GPSFix()
-
-        self.initial_heading_degrees = rospy.get_param('~initial_heading_degrees')
 
         self.count = 0
 

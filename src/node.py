@@ -40,7 +40,7 @@ class Node:
         
         self.sub_gps_navsat = rospy.Subscriber('gps_navsat', NavSatFix, self.gps_navsat_callback)
         
-        self.sub_gps_heading = rospy.Subscriber('heading', Float64, self.gps_heading_callback)
+        self.sub_gps_heading = rospy.Subscriber('gps_heading', Float64, self.gps_heading_callback)
         
         self.gps_msg = GPSFix()
 

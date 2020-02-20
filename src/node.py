@@ -9,7 +9,7 @@ import tf
 import rospy
 #from gps_driver.msg import GPSQual
 from sensor_msgs.msg import NavSatFix
-from std_msgs.msg import Float64
+from std_msgs.msg import Int32
 from nav_msgs.msg import Odometry
 from gps_common.msg import GPSFix
 from geometry_msgs.msg import Quaternion, Twist
@@ -40,7 +40,7 @@ class Node:
         
         self.sub_gps_navsat = rospy.Subscriber('gps_navsat', NavSatFix, self.gps_navsat_callback)
         
-        self.sub_gps_heading = rospy.Subscriber('gps_heading', Float64, self.gps_heading_callback)
+        self.sub_gps_heading = rospy.Subscriber('gps_heading', Int32, self.gps_heading_callback)
         
         self.gps_msg = GPSFix()
 
